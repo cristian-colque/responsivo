@@ -1,0 +1,257 @@
+
+.video-background {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+.hero {
+  position: relative;
+  height: 100vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+.social-icons a:hover {
+  color: #0d6efd;
+}
+#mapa {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+}
+.card {
+transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición personalizada */
+}
+
+.card:hover {
+transform: scale(1.05); /* Aumenta el tamaño de la tarjeta */
+box-shadow: 0 10px 15px rgba(0,0,0,0.2); /* Sombra más intensa */
+}
+
+
+Body.pagina-clases{
+
+
+    /* Minimal custom CSS para efectos específicos */
+    .card-img-overlay {
+        background: rgba(0,0,0,0.7);
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+    .card:hover .card-img-overlay {
+        opacity: 1;
+    }
+    .masonry-grid {
+        transition: all 0.3s;
+    }
+    .hidden {
+        display: none;
+    }
+
+}
+
+Body.pagina-entrenadores{
+
+    /* Efecto flip card */
+    .flip-card {
+        perspective: 1000px;
+        height: 400px;
+        margin-bottom: 30px;
+    }
+    .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+    }
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+    .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .flip-card-back {
+        background-color: #343a40;
+        color: white;
+        transform: rotateY(180deg);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    /* Barras de progreso animadas */
+    .skill-bar {
+        margin-bottom: 15px;
+    }
+    .skill-name {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5px;
+    }
+    .progress {
+        height: 20px;
+        border-radius: 10px;
+    }
+    .progress-bar {
+        border-radius: 10px;
+        transition: none; /* Eliminamos la transición CSS para usar solo jQuery */
+    }
+    
+    /* Rating de estrellas */
+    .rating {
+        unicode-bidi: bidi-override;
+        direction: rtl;
+        text-align: center;
+    }
+    .rating > input {
+        display: none;
+    }
+    .rating > label {
+        display: inline-block;
+        padding: 0 5px;
+        font-size: 2rem;
+        color: #ddd;
+        cursor: pointer;
+    }
+    .rating > input:checked ~ label,
+    .rating > input:hover ~ label,
+    .rating > label:hover,
+    .rating > label:hover ~ label {
+        color: gold;
+    }
+    .flip-card-front {
+height: 100%;
+}
+
+.flip-card-front img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+border-radius: 10px; /* opcional si quieres mantener bordes redondeados */
+}
+.card {
+transition: all 0.3s ease-in-out; /* Suaviza todos los cambios */
+}
+
+.card:hover {
+transform: scale(1.05); /* Agranda ligeramente la tarjeta */
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Añade una sombra suave */
+}
+
+}
+
+
+body.pagina-precios {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+section {
+  background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?fit=crop&w=1920&q=80') no-repeat center center / cover;
+  background-attachment: fixed;
+  color: white;
+  padding: 5rem 0;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+.table-hover tbody tr:hover {
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+
+td, th {
+  transition: background-color 0.3s ease;
+}
+
+table thead th {
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  background: #111;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.badge {
+  font-size: 0.75rem;
+  vertical-align: middle;
+}
+
+
+body.pagina-blog {
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', sans-serif;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+.article {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+.tags button {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.comment {
+  position: relative;
+  padding-left: 60px;
+  margin-top: 1.5rem;
+}
+.comment::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 45px;
+  height: 45px;
+  background-image: url('https://i.pravatar.cc/45?img=3');
+  background-size: cover;
+  border-radius: 50%;
+}
+.reply-btn {
+  font-size: 0.9rem;
+  color: #0d6efd;
+  cursor: pointer;
+}
+.reply-btn:hover {
+  text-decoration: underline;
+}
+.replies {
+  margin-left: 2rem;
+  margin-top: 0.5rem;
+}
+.reply {
+  font-size: 0.9rem;
+  background-color: #e9ecef;
+  border-radius: 5px;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.5rem;
+}

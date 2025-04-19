@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Planes de Gimnasio</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- jQuery (necesario para Bootstrap y scripts personalizados) -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</head>
+<body class="pagina-precios">
+  <!-- Header -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">PowerGym</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Servicios</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Musculación</a></li>
+                  <li><a class="dropdown-item" href="#">Cardio</a></li>
+                  <li><a class="dropdown-item" href="#">Clases grupales</a></li>
+                  <li><a class="dropdown-item" href="#">Funcional</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="clases.html">Clases</a></li>
+              <li class="nav-item"><a class="nav-link" href="entrenadores.html">Entrenadores</a></li>
+              <li class="nav-item"><a class="nav-link" href="precios.html">Precios</a></li>
+              <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+</header>
+
+  <!-- Sección de Planes del Gimnasio -->
+  <section>
+    <div class="container pt-5">
+      <h2 class="text-center mb-4 display-5">🔥 Invertí en vos. Elegí tu plan. 🔥</h2>
+
+      <!-- Toggle mensual/anual -->
+      <div class="text-center mb-4">
+        <label class="form-switch d-inline-flex align-items-center fs-5">
+          <input type="checkbox" id="togglePrecio" class="form-check-input me-2">
+          <span>Mostrar precios anuales</span>
+        </label>
+      </div>
+
+      <!-- Tabla de precios -->
+      <div class="table-responsive">
+        <table class="table table-hover text-center table-bordered align-middle text-white" id="tablaPrecios">
+          <thead class="table-dark">
+            <tr>
+              <th>Plan</th>
+              <th data-bs-toggle="tooltip" title="Acceso a todas las instalaciones del gym">Acceso</th>
+              <th data-bs-toggle="tooltip" title="Clases grupales como Zumba, Funcional y más">Clases</th>
+              <th data-bs-toggle="tooltip" title="Entrenador personal con seguimiento mensual">Coach</th>
+              <th>Precio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Básico</td>
+              <td>✔️</td>
+              <td>❌</td>
+              <td>❌</td>
+              <td class="precio" data-mensual="5000" data-anual="50000">$5000</td>
+            </tr>
+            <tr>
+              <td>Intermedio <span class="badge bg-warning text-dark ms-1">Popular</span></td>
+              <td>✔️</td>
+              <td>✔️</td>
+              <td>❌</td>
+              <td class="precio" data-mensual="8000" data-anual="80000">$8000</td>
+            </tr>
+            <tr>
+              <td>Premium</td>
+              <td>✔️</td>
+              <td>✔️</td>
+              <td>✔️</td>
+              <td class="precio" data-mensual="12000" data-anual="120000">$12000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  <footer id="contacto" class="bg-dark text-white pt-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <h4>Contacto</h4>
+          <form id="formContacto">
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Nombre" required>
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" placeholder="Email" required>
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" rows="3" placeholder="Mensaje" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <h4>Mapa Interactivo</h4>
+          <div id="mapa"></div>
+         
+          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_S-Pw6qwAJiF-orjJxajJVB2ytb7ZvJ0&callback=initMap" async defer></script>
+        </div>
+      </div>
+  
+      <hr class="bg-light my-4">
+  
+      <div class="row text-center">
+        <div class="col-md-6 mb-3">
+          <p class="mb-0">© 2025 PowerGym. Todos los derechos reservados.</p>
+          <p class="mb-0">"La fuerza no viene de la capacidad corporal, sino de la voluntad del alma."</p>
+        </div>
+        <div class="col-md-6">
+          <div class="social-icons">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  
+  <script src="js/scripts.js"></script>
+
+</body>
+</html>
